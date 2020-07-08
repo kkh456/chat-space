@@ -8,7 +8,8 @@
 
 ### Association
 - has_many :chats
--has＿many :groups
+-has＿many :groups, through: :users_groups
+-has_many :users_groups
 
 ## chats テーブル
 |Column|Type|Options|
@@ -20,8 +21,6 @@
 ### Association
 - belongs_to :user
 - has_many :groups
--has_many :user_groups
--has_many :chats, through: :users_groups
 
 ## users_groupsテーブル
 |Column|Type|Option|
@@ -31,7 +30,7 @@
 
 ### Association
 - belong_to :user
-- belong_to :chats
+- belong_to :groups
 
 ## groups_table
 |Column|Type|Options|
@@ -39,4 +38,5 @@
 |group|integer|null :false foreign_key: true|
 ### Association
 - belongs_to :chat
--belongs_to :user
+-has_many :user, through: users_groups
+has_many :users_groups
