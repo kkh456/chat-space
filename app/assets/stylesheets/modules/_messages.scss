@@ -26,7 +26,29 @@
           height: 20px;
           width: 240px;
           margin: 0 20px 0 20px;
-          background-color: white;
+          display: flex;
+          justify-content: space-between;
+          .sideBar__username{
+           height: 100%;
+           width: 20%;
+           font-weight: bold;
+           font-size: 16px;
+           color: #ffffff;
+          }
+          .sideBar__iconlist{
+            height: 100%;
+            width: 60px;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            .sideBar__lefticon{
+            margin-right: 5px;
+            color: #ffffff;
+            }
+            .sideBar__righticon{
+            color: #ffffff;
+            }
+          }
         }
       }
     }
