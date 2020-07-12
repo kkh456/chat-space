@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  .sideBar{
+    width: 300px;
+    background-color: #2f3e51;
+    &__header{
+      height: 100px;
+      width:300px;
+      background-color: #253141;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .sideBar__sideheader{
+        width:calc(300px - 40px);
+        height:100px;
+        margin: 0 20px 0 20px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sideBar__sidebox{
+          height: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .sideBar__username{
+           height: 100%;
+           width: 20%;
+           font-weight: bold;
+           font-size: 16px;
+           color: #ffffff;
+          }
+          .sideBar__iconlist{
+            height: 100%;
+            width: 60px;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            .sideBar__lefticon{
+            margin-right: 5px;
+            color: #ffffff;
+            }
+            .sideBar__righticon{
+            color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+    .sideBar__groups{
+      width: 300px;
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      background-color: #2f3e51;
+      .sideBar__group{
+        height: 100px;
+        width: 240px;
+        padding: 20px 0 40px;
+        .sigeBar__name{
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .sideBar__message{
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 11px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .mainChat{
+    width: calc(100% - 300px);
+    background-color:#fafafa;
+    &__messages{
+      height: calc(100vh - 190px);
+      width: 100%;
+      background-color: #fafafa;
+      box-sizing: border-box;
+      overflow: scroll;
+      padding: 45px 40px 0;
+      .mainChat__message{
+        margin-bottom: 40px;
+        .mainChat__uppermessage{
+          display: flex;
+          .mainChat__username{
+            color: #434a54;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .mainChat__date{
+            color: #999;
+            font-size: 14px;
+            padding-left: 10px;
+          }
+        }
+        .mainChat__lowermessage{
+          margin-top: 10px;
+          .mainChat__comment{
+            color: #434a54;
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &__header{
+      height: 100px; 
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      padding: 0 40px;
+      align-items: center;
+      justify-content: space-between;
+        .mainChat__edit{
+        height: 40px;
+        width: 72px;
+        color: #38aef0;
+        font-size: 16px;
+        border: 1px solid #38aef0;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        }
+        .mainChat__box{
+          float: left;
+          .mainChat__groupname{
+            font-size: 20px;
+            color: blue($color: #000000);
+            margin-top: 35px;
+          }
+          .mainChat__member{
+            font-size: 12px;
+            color: #999999;
+            margin-top: 15px;
+          } 
+        }
+    }
+    &__footer{
+    height: 90px;
+    width: 100%;
+    background-color: #d2d2d2;  
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 20px;
+      .mainChat__form{
+        display: flex;
+        width: 100%;
+        .mainChat__inputbox{
+          width: 100%;
+          display: flex;
+          position: relative;
+          .inputbox__text{
+            height: 50px;
+            width: 100%;
+            color: #434a54;
+            border-style: none;
+            padding: 0 40px 0 10px;
+          }
+          .inputbox__image{
+            cursor: pointer;
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            .inputbox__image__file{
+              display: none;
+            }
+          }
+        }
+      }
+        .submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
+      
+    }
+  }
+}
+
