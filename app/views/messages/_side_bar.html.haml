@@ -3,7 +3,7 @@
     .sideBar__sideheader
       .sideBar__sidebox
         .sideBar__username
-          sample
+          = current_user.name
         .sideBar__iconlist
           = link_to "#", class:"sideBar__lefticon" do
             = icon("fas", "edit") 
