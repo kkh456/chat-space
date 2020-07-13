@@ -7,7 +7,7 @@
         .sideBar__iconlist
           = link_to "#", class:"sideBar__lefticon" do
             = icon("fas", "edit") 
-          = link_to "#", class:"sideBar__righticon" do
+          = link_to edit_user_path(current_user), class: "sideBar__righticon" do
             =icon("fas", "cog")
   .sideBar__groups
     .sideBar__group
