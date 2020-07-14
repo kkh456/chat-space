@@ -8,30 +8,13 @@
     = link_to "#", class: "mainChat__edit" do
       Edit
   .mainChat__messages
-    .mainChat__message
-      .mainChat__uppermessage
-        .mainChat__username
-          aaaa
-        .mainChat__date
-          2020/07/11 21:00
-      .mainChat__lowermessage
-        .mainChat__comment
-          xxxx
-    .mainChat__message
-      .mainChat__uppermessage
-        .mainChat__username
-          aaaa
-        .mainChat__date
-          2020/07/11 21:00
-      .mainChat__lowermessage
-        .mainChat__comment
-          xxxx
-  .mainChat__footer
-    .mainChat__form
-      .mainChat__inputbox
-        %input{type: "text", class: "inputbox__text", placeholder: "type a message"}
-        %label{class: "inputbox__image"}
-          = icon("far", "image")
-          %input{type: "file", class: "inputbox__image__file"}
-      %input{type: "submit", class: "submit-btn"}
-
+    = render @messages
+  .Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .mainChat__form
+        .mainChat__inputbox
+          = f.text_field :content, class: 'inputbox__text', placeholder: 'type a message'
+          = f.label :image, class: 'inputbox__image' do
+            = icon('far', 'image', class: 'inputbox__image')
+            = f.file_field :image, class: 'inputbox__image__file'
+        = f.submit 'Send', class: 'submit-btn'

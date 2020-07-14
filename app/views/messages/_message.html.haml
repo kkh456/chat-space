@@ -1,0 +1,22 @@
+.mainChat__message
+  .mainChat__uppermessage
+    .mainChat__username
+      = message.user.name
+    .mainChat__date
+      = message.created_at.strftime("2020年7月14日 16時00分")
+  .mainChat__lowermessage
+    - if message.content.present?
+      .mainChat__comment
+        = message.content
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
+.mainChat__message
+  .mainChat__uppermessage
+    .mainChat__username
+      = message.user.name
+    .mainChat__date
+      = message.created_at.strftime("2020年7月14日 16時00分")
+  .mainChat__lowermessage
+    - if message.content.present?
+      .mainChat__comment
+        = message.content
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
