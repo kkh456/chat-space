@@ -131,17 +131,22 @@
         text-decoration: none;
         }
         .mainChat__box{
-          float: left;
           .mainChat__groupname{
             font-size: 20px;
             color: blue($color: #000000);
             margin-top: 35px;
           }
-          .mainChat__member{
-            font-size: 12px;
+          .mainChat__smallbox{
+            display: flex;
             color: #999999;
             margin-top: 15px;
-          } 
+            font-size: 12px;
+            // .mainChat__smallbox__member{
+            // } 
+            .mainChat__smallbox__name{
+              padding-right: 5px;
+            }
+          }
         }
     }
     .Form {
