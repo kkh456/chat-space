@@ -5,14 +5,15 @@
         .sideBar__username
           = current_user.name
         .sideBar__iconlist
-          = link_to "#", class:"sideBar__lefticon" do
+          = link_to new_group_path, class:"sideBar__lefticon" do
             = icon("fas", "edit") 
           = link_to edit_user_path(current_user), class: "sideBar__righticon" do
             =icon("fas", "cog")
-  .sideBar__groups
-    .sideBar__group
-      = link_to "#" do
-        .sigeBar__name
-          sample
-        .sideBar__message
-          aaaa
+  .sideBar__grouplist
+    - current_user.groups.each do |group|
+      .sideBar__groups
+        = link_to "#" do
+          .sigeBar__name
+            sample
+          .sideBar__message
+            aaaa
