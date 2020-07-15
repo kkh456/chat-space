@@ -9,7 +9,7 @@
         .mainChat__smallbox__name
           - @group.users.each do |user|
             = user.name
-    = link_to "#", class: "mainChat__edit" do
+    = link_to edit_group_path(@group), class: "mainChat__edit" do
       Edit
   .mainChat__messages
     = render @messages
