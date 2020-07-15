@@ -12,8 +12,8 @@
   .sideBar__grouplist
     - current_user.groups.each do |group|
       .sideBar__groups
-        = link_to "#" do
+        = link_to group_messages_path(group) do
           .sigeBar__name
-            sample
+            = group.name
           .sideBar__message
-            aaaa
+            = group.show_last_message
