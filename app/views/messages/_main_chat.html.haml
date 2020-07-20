@@ -14,7 +14,7 @@
   .mainChat__messages
     = render @messages
   .Form
-    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .mainChat__form
         .mainChat__inputbox
           = f.text_field :content, class: 'inputbox__text', placeholder: 'type a message'
