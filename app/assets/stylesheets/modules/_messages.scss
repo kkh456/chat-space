@@ -156,32 +156,35 @@
       display: flex;
       align-items: center;
       padding: 0 20px 0 20px;
-        .mainChat__form{
-          display: flex;
+        .form{
           width: 100%;
-          .mainChat__inputbox{
-            width: 100%;
+        }
+          .mainChat__form{
             display: flex;
-            position: relative;
-            .inputbox__text{
-              height: 50px;
+            width: 100%;
+            .mainChat__inputbox{
               width: 100%;
-              color: #434a54;
-              border-style: none;
-              padding: 0 40px 0 10px;
-            }
-            .inputbox__image{
-              cursor: pointer;
-              font-size: 1.3rem;
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              .inputbox__image__file{
-                display: none;
+              display: flex;
+              position: relative;
+              .inputbox__text{
+                height: 50px;
+                width: 100%;
+                color: #434a54;
+                border-style: none;
+                padding: 0 40px 0 10px;
+              }
+              .inputbox__image{
+                cursor: pointer;
+                font-size: 1.3rem;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                .inputbox__image__file{
+                  display: none;
+                }
               }
             }
           }
-        }
       .submit-btn{
         width: 100px;
         height: 50px;
