@@ -14,7 +14,7 @@
   .mainChat__messages
     = render @messages
   .Form
-    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .mainChat__form
         .mainChat__inputbox
           = f.text_field :content, class: 'inputbox__text', placeholder: 'type a message'
@@ -22,3 +22,4 @@
             = icon('far', 'image', class: 'inputbox__image')
             = f.file_field :image, class: 'inputbox__image__file'
         = f.submit 'Send', class: 'submit-btn'
+       
