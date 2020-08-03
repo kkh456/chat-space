@@ -238,3 +238,5 @@ Style/PercentLiteralDelimiters:
 # SupportedStyles: percent, brackets
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+#test
